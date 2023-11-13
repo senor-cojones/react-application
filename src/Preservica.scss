@@ -1,0 +1,84 @@
+$black: #000;
+$white: #FFF;
+$inputBg: #edf1f4;
+$inputBorder: #ccd6dd;
+$buttonBg: #50378c;
+$titleColor: #120a44;
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../src/fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+html {
+    font-size: 100%;
+}
+
+.preservica {
+    font-family: "Poppins", sans-serif;
+    width: 25rem;
+    margin: 0 auto;
+
+    &__container {
+        min-width: 250px;
+        width: auto;
+        max-width: 500px;
+        padding: 2rem;
+        background: $white 0 0 no-repeat padding-box;
+        box-shadow: 1px 2px 10px $black;
+        border-radius: 8px;
+        opacity: 1;
+    }
+
+    &__title {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        letter-spacing: 0px;
+        color: $titleColor;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: 4.5rem;
+        line-height: 1;
+    }
+
+    &__input {
+        background-color: $inputBg;
+        color: $black;
+        padding: 18px 8px;
+        margin: 0;
+        font-size: 1rem;
+        line-height: 140%;
+        border-radius: 0;
+        border: 1px solid $inputBorder;
+        width: 100%;
+        outline: none;
+        transition: all .3s ease;
+
+        &-wrapper {
+            margin: 1rem;
+        }
+    }
+
+    &__button {
+        background-color: $buttonBg;
+        text-transform: none;
+        font-weight: normal;
+        padding: 17px 30px;
+        font-size: 1rem;
+        line-height: 120%;
+        border: none;
+        border-radius: 9999px;
+        color: $white;
+        width: 100%;
+        transition: all .3s ease;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
