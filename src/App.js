@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Login";
+import Users from "./Users";
 import "./reset.css";
 import "./App.css";
 import "./Preservica.scss"
@@ -21,6 +22,14 @@ function App() {
                                 loggedIn={loggedIn}
                                 setLoggedIn={setLoggedIn}
                                 setEmail={setEmail}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/users"
+                        element={
+                            <Users
+                                
                             />
                         }
                     />
