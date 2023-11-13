@@ -19,10 +19,14 @@ const Users = ({ ...props }) => {
         console.log("Details button clicked");
     }
 
-    const handleDeleteClick = e => {
-        e.preventDefault();
+    const handleDeleteClick = id => {
+        // const updatedUsers = [...users];
+        // const index = users.findIndex((user) => user.id === id);
 
-        console.log("Delete button clicked");
+        // updatedUsers.splice(index, 1);
+        // setUsers(updatedUsers);
+
+        // return;
     }
 
     return (
@@ -45,7 +49,7 @@ const Users = ({ ...props }) => {
                             <td>
                                 <input
                                     className="preservica__button preservica__button--delete"
-                                    onClick={handleDeleteClick}
+                                    onClick={handleDeleteClick(user.id)}
                                     type="button"
                                     value="Delete"
                                 />
