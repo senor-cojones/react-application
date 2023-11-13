@@ -10,9 +10,9 @@ const Login = ({ ...props }) => {
     }
 
     return (
-        <div>
+        <div className="preservica__container">
             <h2 className="preservica__title">Login</h2>
-            <div className="preservica__container">
+            <form>
                 <div className="preservica__input-wrapper">
                     <input
                         type="email"
@@ -34,12 +34,12 @@ const Login = ({ ...props }) => {
                 <div className="preservica__input-wrapper">
                     <input
                         className="preservica__button"
-                        type="button"
                         onClick={handleClick}
+                        type="button"
                         value="Continue"
                     />
                 </div>
-            </div>
+            </form>
         </div>
     );
 };
