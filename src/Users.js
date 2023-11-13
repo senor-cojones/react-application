@@ -6,7 +6,11 @@ const Users = ({ ...props }) => {
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")
             .then((response) => response.json())
-            .then((users) => setUsers(users));
+            .then((users) => setUsers(users))
+            .catch(() => { fetch("users.json")
+                .then((response) => response.json())
+                .then((users) => setUsers(users))
+        });
     });
 
     const handleDetailsClick = e => {
