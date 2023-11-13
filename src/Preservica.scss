@@ -1,9 +1,10 @@
 $black: #000;
-$white: #FFF;
+$white: #fff;
 $inputBg: #edf1f4;
 $inputBorder: #ccd6dd;
 $buttonBg: #50378c;
 $titleColor: #120a44;
+$error: #e00f0f;
 
 @font-face {
     font-family: "Poppins";
@@ -41,7 +42,7 @@ html {
         color: $titleColor;
         margin-top: 1rem;
         margin-bottom: 2rem;
-        font-size: 4.5rem;
+        font-size: 2.5rem;
         line-height: 1;
     }
 
@@ -60,6 +61,11 @@ html {
 
         &-wrapper {
             margin: 1rem;
+        }
+
+        &--error {
+            color: $error;
+            font-size: .8rem;
         }
     }
 
