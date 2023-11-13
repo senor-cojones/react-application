@@ -9,6 +9,18 @@ const Users = ({ ...props }) => {
             .then((users) => setUsers(users));
     });
 
+    const handleDetailsClick = e => {
+        e.preventDefault();
+
+        console.log("Details button clicked");
+    }
+
+    const handleDeleteClick = e => {
+        e.preventDefault();
+
+        console.log("Delete button clicked");
+    }
+
     return (
         <div className="preservica__container">
             <h2 className="preservica__title">Users</h2>
@@ -18,8 +30,22 @@ const Users = ({ ...props }) => {
                         <tr key={user.id}>
                             <td>{user.name}</td>
                             <td>{user.email}</td>
-                            <td>X</td>
-                            <td>Y</td>
+                            <td>
+                                <input
+                                    className="preservica__button preservica__button--details"
+                                    onClick={handleDetailsClick}
+                                    type="button"
+                                    value="Details"
+                                />
+                            </td>
+                            <td>
+                                <input
+                                    className="preservica__button preservica__button--delete"
+                                    onClick={handleDeleteClick}
+                                    type="button"
+                                    value="Delete"
+                                />
+                            </td>
                         </tr>
                     ))}
                 </tbody>

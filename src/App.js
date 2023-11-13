@@ -3,7 +3,7 @@ import Login from "./Login";
 import Users from "./Users";
 import "./reset.css";
 import "./App.css";
-import "./Preservica.scss"
+import "./Preservica.scss";
 import { useState } from "react";
 
 function App() {
@@ -25,14 +25,7 @@ function App() {
                             />
                         }
                     />
-                    <Route
-                        path="/users"
-                        element={
-                            <Users
-                                
-                            />
-                        }
-                    />
+                    <Route path="/users" element={<Users />} />
                 </Routes>
             </BrowserRouter>
         </div>
